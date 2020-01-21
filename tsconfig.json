@@ -22,6 +22,9 @@
       "@app/*": [
         "app/core/*"
       ],
+      "@modules/*": [
+        "src/app/modules/*"
+      ],
       "@shared/*": [
         "app/shared/*"
       ],
