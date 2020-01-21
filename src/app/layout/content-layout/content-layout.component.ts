@@ -16,6 +16,7 @@ export class ContentLayoutComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.scriptElement.src = './dashforge.js';
+    document.body.appendChild(this.scriptElement);
     replace();
   }
 

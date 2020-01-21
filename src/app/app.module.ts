@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { NavComponent } from './layout/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContentLayoutComponent
+    ContentLayoutComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
