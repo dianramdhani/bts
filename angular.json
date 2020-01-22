@@ -36,7 +36,7 @@
               {
                 "input": "src/styles/themes/dashforge/assets/css/dashforge.profile.css",
                 "lazy": true,
-                "bundleName": "dashforge.profile"
+                "bundleName": "dashforge-profile"
               }
             ],
             "scripts": [
