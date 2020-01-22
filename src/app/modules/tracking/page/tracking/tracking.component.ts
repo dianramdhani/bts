@@ -7,6 +7,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class TrackingComponent implements OnInit, AfterViewInit {
   scriptElement = document.createElement('script');
+  showTimeline = false;
 
   constructor() { }
 
