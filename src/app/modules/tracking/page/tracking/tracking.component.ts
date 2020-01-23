@@ -1,35 +1,18 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { environment } from '@env';
+import { Component } from '@angular/core';
+import { replace } from 'feather-icons';
 
 @Component({
   selector: 'app-tracking',
   templateUrl: './tracking.component.html',
   styleUrls: ['./tracking.component.scss']
 })
-export class TrackingComponent implements OnInit, AfterViewInit {
-  dashforgeProfileEl: HTMLLinkElement | HTMLScriptElement;
+export class TrackingComponent {
   showTimeline = false;
 
   constructor() { }
 
-  ngOnInit() {
+  refresh() {
+    this.showTimeline = true;
+    setTimeout(() => replace(), 100);
   }
-
-  ngAfterViewInit() {
-    if (environment.production) {
-      this.dashforgeProfileEl = document.createElement('link');
-      this.dashforgeProfileEl.rel = 'stylesheet';
-      this.dashforgeProfileEl.href = './dashforge-profile.css';
-      document.head.appendChild(this.dashforgeProfileEl);
-    } else {
-      this.dashforgeProfileEl = document.createElement('script');
-      this.dashforgeProfileEl.src = './dashforge-profile.js';
-      document.body.appendChild(this.dashforgeProfileEl);
-    }
-  }
-
-  ngOnDestroy() {
-    this.dashforgeProfileEl.parentElement.removeChild(this.dashforgeProfileEl);
-  }
-
 }

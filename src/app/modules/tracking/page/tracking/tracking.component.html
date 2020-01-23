@@ -9,107 +9,44 @@
 </div>
 <div class="form-inline justify-content-center pd-y-120">
     <input type="text" class="form-control form-control-lg" placeholder="Please input baggage ID">
-    <button class="btn btn-lg btn-primary mg-sm-l-5 mg-t-10 mg-sm-t-0" (click)="showTimeline = true">Search</button>
+    <button class="btn btn-lg btn-primary mg-sm-l-5 mg-t-10 mg-sm-t-0" (click)="refresh()">Search</button>
 </div>
-<div class="timeline-group tx-13" *ngIf="showTimeline">
-    <div class="timeline-label">Today</div>
-    <div class="timeline-item">
-        <div class="timeline-time">10:30pm</div>
-        <div class="timeline-body">
-            <h6 class="mg-b-0">Building a Simple User Interface</h6>
-            <p><a href="">Elisse Joson</a> San Francisco, CA</p>
-
-            <p>In this lesson, you create a layout in XML that includes a text field and a button. In the next lesson,
-                your app responds when the </p>
-            <nav class="nav nav-row mg-t-15">
-                <a href="" class="nav-link">Like</a>
-                <a href="" class="nav-link">Comment</a>
-            </nav>
-        </div><!-- timeline-body -->
-    </div><!-- timeline-item -->
-    <div class="timeline-item">
-        <div class="timeline-time">08:15pm</div>
-        <div class="timeline-body">
-            <h6 class="mg-b-0">Blueberry Cheesecake Dessert Recipe</h6>
-            <p><a href="">Katherine Lumaad</a> Oakland, CA</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-
-            <a href="" class="d-block wd-lg-50p"><img src="https://via.placeholder.com/1000x667" class="img-fluid"
-                    alt=""></a>
-
-            <nav class="nav nav-row mg-t-15">
-                <a href="" class="nav-link">Like</a>
-                <a href="" class="nav-link">Comment</a>
-            </nav>
-        </div><!-- timeline-body -->
-    </div><!-- timeline-item -->
-    <div class="timeline-item">
-        <div class="timeline-time">03:30pm</div>
-        <div class="timeline-body">
-            <h6 class="mg-b-0">Your Finances Don't Have to Be Perfect to Work</h6>
-            <p><a href="">Elisse Joson</a> San Francisco, CA</p>
-
-            <p>In this lesson, you create a layout in XML that includes a text field and a button. In the next lesson,
-                your app responds when the lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-            <nav class="nav nav-row mg-t-15">
-                <a href="" class="nav-link">Like</a>
-                <a href="" class="nav-link">Comment</a>
-            </nav>
-        </div><!-- timeline-body -->
-    </div><!-- timeline-item -->
-    <div class="timeline-label">Yesterday</div>
-    <div class="timeline-item">
-        <div class="timeline-time">06:30pm</div>
-        <div class="timeline-body">
-            <h6 class="mg-b-0">An Engineer Explains Why You Should Always Order the Larger Pizza</h6>
-            <p><a href="">Elisse Joson</a> San Francisco, CA</p>
-
-            <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                montes.</p>
-
-            <div class="row row-xs">
-                <div class="col"><img src="https://via.placeholder.com/500" class="img-fluid" alt=""></div>
-                <div class="col"><img src="https://via.placeholder.com/500x281" class="img-fluid" alt=""></div>
-            </div>
-
-            <nav class="nav nav-row mg-t-15">
-                <a href="" class="nav-link">Like</a>
-                <a href="" class="nav-link">Comment</a>
-            </nav>
-        </div><!-- timeline-body -->
-    </div><!-- timeline-item -->
-    <div class="timeline-item">
-        <div class="timeline-time">01:15pm</div>
-        <div class="timeline-body">
-            <h6 class="mg-b-0">The Strange Persistence of First Languages</h6>
-            <p><a href="">Elisse Joson</a> San Francisco, CA</p>
-
-            <p>In this lesson, you create a layout in XML that includes a text field and a button. In the next lesson,
-                your app responds when the world.</p>
-            <nav class="nav nav-row mg-t-15">
-                <a href="" class="nav-link">Like</a>
-                <a href="" class="nav-link">Comment</a>
-            </nav>
-        </div><!-- timeline-body -->
-    </div><!-- timeline-item -->
-    <div class="timeline-label">March 21, 2019</div>
-    <div class="timeline-item">
-        <div class="timeline-time">11:45am</div>
-        <div class="timeline-body">
-            <h6 class="mg-b-0">How to Win Your Next Political Argument</h6>
-            <p><a href="">Elisse Joson</a> San Francisco, CA</p>
-
-            <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                montes.</p>
-            <p>In this lesson, you create a layout in XML that includes a text field and a button. In the next lesson,
-                your app responds when the world.</p>
-            <nav class="nav nav-row mg-t-15">
-                <a href="" class="nav-link">Like</a>
-                <a href="" class="nav-link">Comment</a>
-            </nav>
-        </div><!-- timeline-body -->
-    </div><!-- timeline-item -->
-</div><!-- timeline-group -->
+<div class="d-flex justify-content-center" *ngIf="showTimeline">
+    <div>
+        <h6 class="mg-l-55 tx-primary">1 January 2020</h6>
+        <ul class="activity tx-13">
+            <li class="activity-item">
+                <div class="activity-icon bg-primary-light tx-primary">
+                    <i data-feather="clock"></i>
+                </div>
+                <div class="activity-body">
+                    <p class="mg-b-2"><strong>Louise</strong> added a time entry to the ticket <a href=""
+                            class="link-02"><strong>Sales Revenue</strong></a></p>
+                    <small class="tx-color-03">13:20 (2 hours ago)</small>
+                </div>
+            </li>
+            <li class="activity-item">
+                <div class="activity-icon bg-success-light tx-success">
+                    <i data-feather="paperclip"></i>
+                </div>
+                <div class="activity-body">
+                    <p class="mg-b-2"><strong>Kevin</strong> added new attachment to the ticket <a href=""
+                            class="link-01"><strong>Software Bug Reporting</strong></a></p>
+                    <small class="tx-color-03">13:20 (2 hours ago)</small>
+                </div>
+            </li>
+            <li class="activity-item">
+                <div class="activity-icon bg-warning-light tx-orange">
+                    <i data-feather="share"></i>
+                </div>
+                <div class="activity-body">
+                    <p class="mg-b-2"><strong>Natalie</strong> reassigned ticket <a href=""
+                            class="link-02"><strong>Problem
+                                installing software</strong></a> to
+                        <strong>Katherine</strong></p>
+                    <small class="tx-color-03">13:20 (2 hours ago)</small>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
